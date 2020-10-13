@@ -60,7 +60,7 @@ a.create-orphanage:hover {
 
 .leaflet-popup-content-wrapper {
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 17.2828px 27.65px 41.48px rgba(23, 142, 166, 0.16);
+  /*box-shadow: 17.2828px 27.65px 41.48px rgba(23, 142, 166, 0.16);*/
   border-radius: 20px;
 }
 
@@ -72,4 +72,15 @@ a.create-orphanage:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.leaflet-popup-content a {
+  width: 4rem;
+  height: 4rem;
+  background: #15c3d6;
+  box-shadow: 17.2828px 27.65px 41.48px rgba(23, 142, 166, 0.16);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
