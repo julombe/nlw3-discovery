@@ -8,6 +8,9 @@
 aside {
   width: clamp(24rem, 25vw, 44rem);
   background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
-
   padding: 8rem;
+
+  display: flex;
+  flex-direction: column; /*irá colocar um elemento embaixo do outro*/
+  justify-content: space-between; /*irá separar os elementos colocando um emcima e outro embaixo com distanciamento*/
 }
