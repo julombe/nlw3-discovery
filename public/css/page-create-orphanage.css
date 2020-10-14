@@ -1,3 +1,12 @@
+#page-create-orphanage {
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 form {
   width: 70rem;
   margin: 6.4rem auto;
