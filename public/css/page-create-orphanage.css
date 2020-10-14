@@ -22,6 +22,10 @@ fieldset {
   border: 0;
 }
 
+fieldset + fieldset {
+  margin-top: 8rem;
+}
+
 fieldset legend {
   width: 100%;
 
@@ -30,4 +34,8 @@ fieldset legend {
 
   color: #5c8599;
   font-weight: 700;
+
+  border-bottom: 1px solid #d3e2e5;
+  margin-bottom: 4rem;
+  padding-bottom: 2.4rem;
 }
