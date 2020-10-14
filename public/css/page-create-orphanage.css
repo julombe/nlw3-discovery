@@ -17,3 +17,17 @@ form {
   overflow: hidden;
   padding: 8rem;
 }
+
+fieldset {
+  border: 0;
+}
+
+fieldset legend {
+  width: 100%;
+
+  font-size: 3.2rem;
+  line-height: 1.5;
+
+  color: #5c8599;
+  font-weight: 700;
+}
