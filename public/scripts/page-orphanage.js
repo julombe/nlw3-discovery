@@ -34,6 +34,25 @@ L.marker([-8.9055183,13.2221317], { icon })
 
 /*image gallery. Seleção das imagens */
 
-function selectImage(event)
+function selectImage(event) {
+    const button = event.currentTarget
+
+    // remover todas as classes .active
+    const buttons = document.querySelectorAll(".images button")
+    buttons.forEach(removeActiveClass)
+
+    function removeActiveClass(button) {
+        button.classList.remove("active")
+    }
+
+
+    // selecionar a imagem clicada
+
+
+    // actualizar o container de imagem
+
+    // adicionar a classe .active para o botão clicado
+    button.classList.add('active')
+}
 
     
