@@ -31,4 +31,9 @@ const icon = L.icon({
 L.marker([-8.9055183,13.2221317], { icon })
 .addTo(map)
 
+
+/*image gallery. Seleção das imagens */
+
+function selectImage(event)
+
     
