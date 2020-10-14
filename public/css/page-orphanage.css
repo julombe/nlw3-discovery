@@ -84,3 +84,22 @@ aside.sidebar footer button:hover {
   height: 8.8rem;
   object-fit: cover;
 }
+
+/* orphanage-details-content */
+
+.orphanage-details-content {
+  padding: 8rem;
+}
+
+.orphanage-details-content h1 {
+  color: #4d6f80;
+  font-size: 5.4rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.orphanage-details-content p {
+  line-height: 1.5;
+  color: #5c8599;
+  margin-top: 2.4rem;
+}
