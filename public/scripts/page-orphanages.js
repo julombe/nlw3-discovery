@@ -17,7 +17,6 @@ const icon = L.icon({
 
 function addMarker({id, name, lat, lng}) {
 
-
     // create popup overlay
     const popup = L.popup({
         closeButton: false,
@@ -34,5 +33,18 @@ function addMarker({id, name, lat, lng}) {
 }
 
 
+const orphanagesSpan = document.querySelectorAll('.orphanages span')
+
+orphanagesSpan.forEach( span => {
+    const orphanage = {
+        id: span.dataset.id,
+        name: span.dataset.name,
+        lat: span.dataset.lat,
+        lng: span.dataset.lng
+
+    }
+
+    addMarker(orphanage)
+})
 
     
