@@ -24,10 +24,10 @@ function addMarker({id, name, lat, lng}) {
         className: 'map-popup',
         minWidth: 240,
         minHeight: 240
-    }).setContent(`${name} <a href="orphanage?id=${id}" class="choose-orphanage"> <img src="/images/arrow-white.svg"> </a>`)
+    }).setContent(`${name} <a href="orphanage?id=${id}"> <img src="/images/arrow-white.svg"> </a>`)
 
     // create and add marker
-    L.marker([-8.9055183,13.2221317], { icon })
+    L.marker([lat, lng], { icon })
     .addTo(map)
     .bindPopup(popup)
 
