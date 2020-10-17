@@ -15,17 +15,24 @@ const icon = L.icon({
    popupAnchor: [170, 2]
 })
 
+function addMarker({id, name, lat, lng}) {
 
-// create popup overlay
-const popup = L.popup({
-    closeButton: false,
-    className: 'map-popup',
-    minWidth: 240,
-    minHeight: 240
-}).setContent('Lar das meninas <a href="orphanage?id=1" class="choose-orphanage"> <img src="/images/arrow-white.svg"> </a>')
 
-// create and add marker
-L.marker([-8.9055183,13.2221317], { icon })
-.addTo(map)
-.bindPopup(popup)
+    // create popup overlay
+    const popup = L.popup({
+        closeButton: false,
+        className: 'map-popup',
+        minWidth: 240,
+        minHeight: 240
+    }).setContent('Lar das meninas <a href="orphanage?id=1" class="choose-orphanage"> <img src="/images/arrow-white.svg"> </a>')
+
+    // create and add marker
+    L.marker([-8.9055183,13.2221317], { icon })
+    .addTo(map)
+    .bindPopup(popup)
+
+}
+
+
+
     
