@@ -79,12 +79,18 @@
               <img src="/images/clock.svg" alt="Horários" />
               {{orphanage.opening_hours}}
             </div>
-            <div class="open-on-weekends">
-              {{#if orphanage.opening_on_weekends}}
+
+            {{#if orphanage.opening_on_weekends}}
+            <div class="open-on-weekends open">
               <img src="/images/info.svg" alt="Informações" />
               Atendemos fim de semana
-              {{/if}}
             </div>
+            {{else}}
+            <div class="open-on-weekends closed">
+              <img src="/images/info-red.svg" alt="Informações" />
+              Não atendemos fim de semana
+            </div>
+            {{/if}}
           </div>
 
           <button class="primary-button" type="button">
