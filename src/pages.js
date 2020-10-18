@@ -1,27 +1,45 @@
 // exportar as informações do fakedatabase
-
-const orphanages = require('./database/fakedata.js');
-
+const Database = require("./database/db");
+const saveOrphanage = require("./database/saveOrphanage");
 
 module.exports = {
+  index(req, res) {
+    const city = req.query.city;
+    return res.render("index");
+  },
 
-    index(req, res) {
-        const city = req.query.city
-        return res.render('index')
-    },
+  async orphanage(req, res) {
 
-    orphanage(req, res) {
-        return res.render('orphanage')
+    const id = req.query.id
 
-    },
+    try {
+      const db = await Database;
+      const results = await db.all(`SELECT * FROM orphanages WHERE id = "${id}"`)
+      const orphanage = results[0]
 
-    orphanages(req, res) {
-        return res.render('orphanages', { orphanages })
+      orphanage.images = orphanage.images.split(",")
+      orphanage.firstImage = orphanage.images[0]
 
-    },
 
-    createOrphanage(req, res) {
-        return res.render('create-orphanage')
-
+      return res.render("orphanage", {orphanage});
+    } catch (error) {
+      console.log(error);
+      return res.send("Erro no banco de dados");
     }
-}
+  },
+
+  async orphanages(req, res) {
+    try {
+      const db = await Database;
+      const orphanages = await db.all("SELECT * FROM orphanages");
+      return res.render("orphanages", { orphanages });
+    } catch (error) {
+      console.log(error);
+      return res.send("Erro no banco de dados");
+    }
+  },
+
+  createOrphanage(req, res) {
+    return res.render("create-orphanage");
+  },
+};
