@@ -95,6 +95,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* ou 1fr 1fr */
   column-gap: 2rem;
+  line-height: 1.5;
 }
 
 .open-details div {
